@@ -18,7 +18,7 @@ Specyfikacja wymagań funkcjonalnych w ramach informatyzacji procesu sprzedaży 
 1. [Sprzedający](#ac1) wystawia produkt na aukcję. ([UC1](#uc1))
 2. [Kupujący](#ac2) oferuje kwotę za produkt wyższą od aktualnie najwyższej oferty. ([BR1](#br1)) ([UC2](#uc2))
 3. [Kupujący](#ac2) wygrywa aukcję ([BR2](#br2)) ([UC3](#uc3))
-4. [Kupujący](#ac2) przekazuje należność Sprzedającemu. ([UC4](#uc4))
+4. [Kupujący](#ac2) przekazuje należność Sprzedającemu. ([BR3](#br3)) ([UC4](#uc4)) 
 5. [Sprzedający](#ac1) przekazuje produkt Kupującemu. ([UC5](#uc5))
 
 **Scenariusze alternatywne:** 
@@ -136,9 +136,6 @@ Osoba chcąca zakupić produkt na aukcji.
 
 ## Obiewkty biznesowe (inaczje obiekty dziedzinowe lub informatycjne)
 
-[//]: # (może być ofert)
-[//]: # (moze paczka)
-
 ### BO1: Aukcja
 
 Aukcja jest formą zawierania transakcji kupna-sprzedaży, w której Sprzedający określa cenę wywoławczą produktu, natomiast Kupujący mogą oferować własną ofertę zakupu każdorazowo proponując kwotę wyższą od aktualnie oferowanej kwoty. Aukcja kończy się po upływie określonego czasu. Jeśli złożona została co najmniej jedna oferta zakupy produkt nabywa ten Kupujący, który zaproponował najwyższą kwotę. 
@@ -146,6 +143,11 @@ Aukcja jest formą zawierania transakcji kupna-sprzedaży, w której Sprzedając
 ### BO2: Produkt
 
 Fizyczny lub cyfrowy obiekt, który ma zostać sprzedany w ramach aukcji.
+
+### BO2: Oferta
+
+Propozycja od [Kupujący](#ac2) ceny w ramach aukcji
+
 
 ## Reguły biznesowe
 
@@ -159,6 +161,11 @@ Złożenie oferty wymaga zaproponowania kwoty wyższej niż aktualnie oferowana 
 ### BR2: Rozstrzygnięcie aukcji
 
 Aukcję wygrywa ten z [Kupujący](#ac2)ch, który w momencie jej zakończenia (upłynięcia czasu) złożył najwyższą ofertę.
+
+<a id="br3"></a>
+### BR3: Blokada Kupującego wrazie nie zapłaty aukcji
+
+Blokada konta
 
 ## Macierz CRUDL
 
